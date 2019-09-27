@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <title>Media Player NaCl</title>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="cplayer.js"></script>
+  <style>
+  	span {
+    	text-indent: 20px; 
+   	}
+    #progress {
+      position: absolute;
+      display: block;
+      left: 50%;
+      top: 50%;
+      width: 60px;
+      margin-left: -30px;
+    }
+  </style>
+</head>
+<body bgcolor=#F6F6F6 data-width="640" data-height="480" data-name="media_playern" data-tools="newlib glibc" data-configs="Release" data-path="{tc}/{config}">
+  <h1>VXG Media Player (v.1.8.51) </h1>
+  <h2>Status: <code id="statusField">NO-STATUS</code></h2>
+  <h2>(Demo) - Playback Video & Audio</h2>
+  <!-- The NaCl plugin will be embedded inside the element with id "listener".
+      See common.js.-->
+  <table><tr>
+	  <td>
+	  <div class="function" id="connect">
+    	<span>
+    	  Url:
+      	  <input type="text" size="60" value="rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov">
+          <button disabled>Connect</button>
+        </span>
+  	  </div>
+  	  </td>
+  	  <td>
+	  <div class="function" id="avsync">
+    	<span>
+    	  <p>A/V Sync:
+      	  <input type="checkbox" checked="checked">
+          <button disabled>Set</button>
+          </p>
+        </span>
+  	  </div>
+  	  </td>
+
+  	  <td>
+	  <div class="function" id="mutetrigger">
+	  <span>
+	  <p>
+          <button disabled>Mute</button>
+          </p>
+          <span>
+  	  </div>
+  	  </td>
+
+  	  <td>
+	  <div class="function" id="volumedown">
+	  <p>
+          <button disabled>Vol-</button>
+          </p>
+  	  </div>
+  	  </td>
+  	  <td>
+	  <div class="function" id="volumeup">
+	  <p>
+          <button disabled>Vol+</button>
+          </p>
+  	  </div>
+  	  </td>
+
+
+  	  <td>
+	  <div class="function" id="latency">
+    	<span>
+    	  <p>Max latency(ms):
+      	  <input type="number" size="5" value="1000000">
+          <button disabled>Set</button>
+          </p>
+        </span>
+  	  </div>
+  	  </td>
+  	<td>
+	  <div class="function" id="showlog"> <span> <p>
+          <button id="showlogbutton" disabled>Show Log</button>
+      </p> </span> </div>
+  	</td>
+   </tr></table>	
+
+  <br/>
+  <table><tr><td bgcolor=#666666>
+  <div id="listener"> </div>
+  </td><td valign="top" id="logtd" valign="top" style="display:none;"> 	
+  <p><b>Log:</b></p>
+  <pre id="log" style="font-weight: bold"></pre>
+  </td></tr></table>	
+  <img id="progress" src="progress.gif" alt="progress"/>
+  <br/>
+  <br/>
+  <a href="http://www.videoexpertsgroup.com/chrome-media-player-plug-in/">Visit the Video Experts Group' Media Player Plug-in page for support</a>
+</body>
+</html>
+
